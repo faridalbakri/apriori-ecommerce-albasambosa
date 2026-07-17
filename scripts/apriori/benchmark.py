@@ -1,13 +1,4 @@
 #!/usr/bin/env python3
-"""
-Cross-validate PHP Apriori results against Python mlxtend implementation.
-
-Usage:
-  1. Export baskets from DB:  php artisan apriori:export-data
-  2. Run benchmark:           python scripts/apriori/benchmark.py
-
-Output: precision, recall, F1 score comparing PHP vs Python rules.
-"""
 
 import json
 import sys

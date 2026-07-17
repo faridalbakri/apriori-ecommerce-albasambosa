@@ -1,24 +1,4 @@
 #!/usr/bin/env python3
-"""
-ONE-TIME SCRIPT — already executed for historical data import (July 2026).
-The hardcoded KNOWN_PRODUCTS list was valid at the time of import.
-If products are added/removed, update KNOWN_PRODUCTS or re-run with a new mapping CSV.
-
-Clean historical transactions Excel file, fuzzy-match products to database,
-run Apriori algorithm, and output JSON rules for import.
-
-Usage:
-  # First run: generates mapping CSV for admin review
-  python scripts/apriori/clean_and_mine.py
-
-  # After admin fills mapped_product column in product_mapping.csv:
-  python scripts/apriori/clean_and_mine.py
-
-Input:  histori-transaksi.xlsx (in project root)
-Output: storage/app/apriori/rules.json
-        storage/app/apriori/product_mapping.csv (admin edits mapped_product column)
-        storage/app/apriori/unmatched_products.md (reference report)
-"""
 
 import csv
 import json
